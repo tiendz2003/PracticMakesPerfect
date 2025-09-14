@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">@dimen/button_padding</item>
+    </style>
+
+    <style name="Widget.App.Button.Primary" parent="Widget.App.Button">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="Widget.App.Button.Secondary" parent="Widget.App.Button">
+        <item name="backgroundTint">@color/teal_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="Widget.App.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="strokeColor">@color/primaryColor</item>
+        <item name="strokeWidth">@dimen/button_stroke_width</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+</resources>

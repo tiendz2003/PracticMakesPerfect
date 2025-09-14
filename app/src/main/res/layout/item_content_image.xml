@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_content_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintDimensionRatio="16:9"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+            android:id="@+id/tv_image_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface_color"
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            tools:text="HLV Solari sắp sửa bị sa thải" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

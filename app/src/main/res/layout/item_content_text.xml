@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for Text Content Sections (section_type: 1) -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/tv_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.4"
+        android:padding="18dp"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        tools:text="3 trận thua liên tiếp chỉ trong vòng 1 tuần khiến Real Madrid hết cơ hội cạnh tranh danh hiệu ở 3 đấu trường. Tại La Liga, trận thua 0-1 khiến Real bị đại kình địch Barcelona lới rộng khoảng cách lên 12 điểm." />
+
+</androidx.cardview.widget.CardView>
