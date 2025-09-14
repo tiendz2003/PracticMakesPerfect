@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <style name="Theme.PracticeMakesPerfect" parent="Theme.MaterialComponents.Light.NoActionBar" >
+            <item name="colorPrimary">@color/primaryColor</item>
+            <item name="colorPrimaryVariant">@color/primaryColor</item>
+            <item name="colorControlHighlight">@color/primaryColor</item>
+            <item name="android:statusBarColor">@color/primaryColor</item>
+            <item name="colorOnPrimary">@color/white</item>
+            <item name="fontFamily">@font/medium</item>
+        </style>
+</resources>
