@@ -16,6 +16,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.manutd.ronaldo.practicemakesperfect.R
 import com.manutd.ronaldo.practicemakesperfect.databinding.MainActivityBinding
 import com.manutd.ronaldo.practicemakesperfect.presentation.ui.SharedViewModel
+import com.manutd.ronaldo.practicemakesperfect.presentation.ui.home.UiState
+import com.manutd.ronaldo.practicemakesperfect.presentation.ui.movies.MoviesViewModel
 import com.skydoves.transformationlayout.onTransformationStartContainer
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         MainActivityBinding.inflate(layoutInflater)
     }
     private lateinit var navController: NavController
-    private val viewModels: SharedViewModel by viewModels()
+    private val viewModels: MoviesViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         onTransformationStartContainer()
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 Lifecycle.State.STARTED
             ).collect { state ->
                 Log.d("MainActivity", "observeViewModel:$state ")
-                if (state.isLoading) {
+                if (state is UiState.Loading) {
                     binding.progressBar.visibility = View.VISIBLE
                 } else {
                     binding.progressBar.visibility = View.GONE
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     fun setupBottomBar() {
         val topLevelDestinations = setOf(
             R.id.homeFragment,
-            R.id.accountFragment
+            R.id.accountFragment,
         )
         val navHost =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

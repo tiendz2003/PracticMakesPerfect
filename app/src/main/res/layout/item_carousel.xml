@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/dp_654"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@color/primaryColor"
+    android:tag="layout/item_carousel_0">
+
+    <ImageView
+        android:id="@+id/blurView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonWatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_124"
+        android:background="@drawable/bg_gradient_blur_bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/blurView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pagerTop"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/dp_130"
+        android:paddingBottom="@dimen/dp_16"
+        app:layout_constraintBottom_toTopOf="@+id/textTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintBottom_toTopOf="@+id/textTitleEnglish"
+        app:layout_constraintEnd_toEndOf="@+id/buttonInfo"
+        app:layout_constraintStart_toStartOf="@+id/buttonWatch"
+        app:TextStyle="bold" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textTitleEnglish"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWatch"
+        app:layout_constraintEnd_toEndOf="@+id/buttonInfo"
+        app:layout_constraintStart_toStartOf="@+id/buttonWatch" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultButton
+        android:id="@+id/buttonWatch"
+        style="@style/RoYellowButton"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/dp_42"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:text="@string/label_watch"
+        app:icon="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@+id/textImdb"
+        app:layout_constraintEnd_toStartOf="@+id/buttonInfo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultButton
+        android:id="@+id/buttonInfo"
+        style="@style/RoWhiteButton"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/dp_42"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:textColor="@color/black"
+        android:text="@string/label_info"
+        app:icon="@drawable/ic_info"
+        app:layout_constraintBottom_toTopOf="@+id/textImdb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonWatch" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textImdb"
+        style="@style/RoTagImdb"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:layout_constraintBottom_toTopOf="@+id/textDescription"
+        app:layout_constraintEnd_toStartOf="@+id/textQuality"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textQuality"
+        style="@style/RoTagSolid"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:background="@drawable/bg_gradient_quality"
+        app:layout_constraintEnd_toStartOf="@+id/textRate"
+        app:layout_constraintStart_toEndOf="@+id/textImdb"
+        app:layout_constraintTop_toTopOf="@+id/textImdb" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textRate"
+        style="@style/RoTagSolid"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        app:layout_constraintEnd_toStartOf="@+id/textYear"
+        app:layout_constraintStart_toEndOf="@+id/textQuality"
+        app:layout_constraintTop_toTopOf="@+id/textImdb" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textYear"
+        style="@style/RoTagOutline"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        app:layout_constraintEnd_toStartOf="@+id/textSeason"
+        app:layout_constraintStart_toEndOf="@+id/textRate"
+        app:layout_constraintTop_toTopOf="@+id/textImdb" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textSeason"
+        style="@style/RoTagOutline"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/textEpisode"
+        app:layout_constraintStart_toEndOf="@+id/textYear"
+        app:layout_constraintTop_toTopOf="@+id/textImdb" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textEpisode"
+        style="@style/RoTagOutline"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textSeason"
+        app:layout_constraintTop_toTopOf="@+id/textImdb" />
+
+    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+        android:id="@+id/textDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/dp_6"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toTopOf="@+id/indicatorHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/indicatorHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsClickable="false"
+        app:dotsColor="@color/light_gray"
+        app:dotsSize="@dimen/dp_8"
+        app:dotsSpacing="@dimen/dp_4"
+        app:dotsWidthFactor="4.0"
+        android:layout_marginBottom="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:selectedDotColor="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

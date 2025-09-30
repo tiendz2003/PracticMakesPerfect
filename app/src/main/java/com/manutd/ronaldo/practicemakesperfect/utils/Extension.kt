@@ -2,11 +2,13 @@ package com.manutd.ronaldo.practicemakesperfect.utils
 
 import android.R.attr.bitmap
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
 import android.util.Log
+import android.util.TypedValue
 import androidx.camera.core.ImageProxy
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.FileProvider
@@ -73,4 +75,12 @@ fun Bitmap.saveBitmapToCache(context: Context): Uri? {
         e.printStackTrace()
         null
     }
+}
+
+fun Int.dpToPx(): Int {
+    return TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    ).toInt()
 }

@@ -1,8 +1,10 @@
 package com.manutd.ronaldo.practicemakesperfect.data.di
 
 import com.manutd.ronaldo.practicemakesperfect.data.repository.CameraRepositoryImpl
+import com.manutd.ronaldo.practicemakesperfect.data.repository.MoviesRepositoryImpl
 import com.manutd.ronaldo.practicemakesperfect.data.repository.NewsRepositoryImpl
 import com.manutd.ronaldo.practicemakesperfect.domain.repository.CameraRepository
+import com.manutd.ronaldo.practicemakesperfect.domain.repository.MoviesRepository
 import com.manutd.ronaldo.practicemakesperfect.domain.repository.NewsRepository
 import dagger.Binds
 import dagger.Module
@@ -25,5 +27,11 @@ abstract class RepositoryModule {
     abstract fun bindCameraRepository(
         cameraRepositoryImpl: CameraRepositoryImpl
     ): CameraRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindMoviesRepository(
+        moviesRepositoryImpl: MoviesRepositoryImpl
+    ): MoviesRepository
 
 }

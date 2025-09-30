@@ -2,6 +2,8 @@ package com.manutd.ronaldo.practicemakesperfect.data.service
 
 import com.manutd.ronaldo.practicemakesperfect.data.model.DetailNewsResponse
 import com.manutd.ronaldo.practicemakesperfect.data.model.NewsResponse
+import com.manutd.ronaldo.practicemakesperfect.data.model.RophimResponse
+import com.skydoves.sandwich.ApiResponse
 import retrofit2.http.GET
 
 interface ApiService {
@@ -10,4 +12,8 @@ interface ApiService {
 
     @GET("detail.json")
     suspend fun getDetailNews(): DetailNewsResponse
+
+    @GET(".")
+    suspend fun getMovies(): ApiResponse<RophimResponse>
+
 }

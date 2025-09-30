@@ -2,6 +2,7 @@ package com.manutd.ronaldo.practicemakesperfect.data.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.manutd.ronaldo.practicemakesperfect.data.service.ApiService
+import com.skydoves.sandwich.retrofit.adapters.ApiResponseCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,9 +41,10 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient,json: Json): Retrofit {
         val contentType = "application/json".toMediaType()
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl("https://iptv.rophim.dev/")
             .client(okHttpClient)
             .addConverterFactory(json.asConverterFactory(contentType))
+            .addCallAdapterFactory(ApiResponseCallAdapterFactory.create())
             .build()
     }
 

@@ -3,6 +3,7 @@ package com.manutd.ronaldo.practicemakesperfect.presentation.ui
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.manutd.ronaldo.practicemakesperfect.domain.repository.MoviesRepository
 import com.manutd.ronaldo.practicemakesperfect.domain.repository.NewsRepository
 import com.manutd.ronaldo.practicemakesperfect.presentation.ui.home.HomeUiState
 import com.manutd.ronaldo.practicemakesperfect.utils.Resource
@@ -15,13 +16,21 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SharedViewModel @Inject constructor(
-    private val newsRepository: NewsRepository
+    private val newsRepository: NewsRepository,
+    private val moviesRepository: MoviesRepository
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(HomeUiState())
     val uiState = _uiState.asStateFlow()
 
     init {
         getNews()
+        viewModelScope.launch {
+            val response = moviesRepository.getMovies{
+                Log.d("SharedViewModel", "getMovies: $it")
+
+            }
+            Log.d("SharedViewModel", "getMovies: $response")
+        }
     }
 
     private fun updateState(newState: (HomeUiState) -> HomeUiState) {

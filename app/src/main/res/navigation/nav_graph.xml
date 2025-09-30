@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/moviesFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -57,4 +57,8 @@
         android:id="@+id/detailFragment"
         android:name="com.manutd.ronaldo.practicemakesperfect.presentation.ui.home.DetailFragment"
         android:label="DetailFragment" />
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.manutd.ronaldo.practicemakesperfect.presentation.ui.movies.MoviesFragment"
+        android:label="MoviesFragment" />
 </navigation>

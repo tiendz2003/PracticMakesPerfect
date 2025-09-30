@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/fragment_home_0">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshHome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHome"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerLabel" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <View
+        android:id="@+id/viewTopGradient"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_125"
+        android:background="@drawable/bg_gradient_blur_top" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_blur_top">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_70"
+                app:layout_collapseMode="pin">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageLogoHoz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_logo" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonSettings"
+                    android:layout_width="@dimen/dp_56"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:foreground="@drawable/ripple_circle"
+                    android:padding="@dimen/dp_18"
+                    app:srcCompat="@drawable/ic_setting" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/buttonNotification"
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_56"
+                        android:foreground="@drawable/ripple_circle"
+                        android:padding="@dimen/dp_18"
+                        app:srcCompat="@drawable/ic_home_notification" />
+
+                    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+                        android:id="@+id/badgeNotiCount"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_gravity="end|center|top"
+                        android:layout_margin="@dimen/dp_12"
+                        android:background="@drawable/bg_accent_circle"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_11"
+                        android:visibility="visible"
+                        app:TextStyle="bold" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <HorizontalScrollView
+                android:id="@+id/layoutCategory"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp_66"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonProfile">
+
+                <LinearLayout
+                    android:id="@+id/layoutChildCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_36"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+                        android:id="@+id/buttonSuggest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_white_corners_50dp"
+                        android:foreground="@drawable/ripple_dark_corners_50dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="@string/label_recommend"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12"
+                        app:TextStyle="medium" />
+
+                    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+                        android:id="@+id/buttonSeries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_outline_white_corners_50dp"
+                        android:foreground="@drawable/ripple_corners_50dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="@string/label_series"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:TextStyle="medium" />
+
+                    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+                        android:id="@+id/buttonMovie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_outline_white_corners_50dp"
+                        android:foreground="@drawable/ripple_corners_50dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="@string/label_single_movie"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:TextStyle="medium" />
+
+                    <com.manutd.ronaldo.practicemakesperfect.presentation.theme.DefaultTextView
+                        android:id="@+id/buttonCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_outline_white_corners_50dp"
+                        android:foreground="@drawable/ripple_corners_50dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="@string/label_genre"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:TextStyle="medium" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -17,7 +17,7 @@ class DefaultButton @JvmOverloads constructor(
 ) : MaterialButton(context, attrs, defStyleAttr) {
     init {
         initButton(attrs)
-        defaultSetup()
+        //defaultSetup()
     }
 
     fun defaultSetup() {
@@ -40,7 +40,7 @@ class DefaultButton @JvmOverloads constructor(
         when (style) {
             0 -> { // Primary
                 backgroundTintList = ContextCompat.getColorStateList(context, R.color.primaryColor)
-                setTextColor(ContextCompat.getColor(context, R.color.white))
+                setTextColor(ContextCompat.getColor(context, R.color.black))
                 typeface = resources.getFont(R.font.bold)
             }
 
@@ -62,7 +62,7 @@ class DefaultButton @JvmOverloads constructor(
 
             else -> {
                 backgroundTintList = ContextCompat.getColorStateList(context, R.color.primaryColor)
-                setTextColor(ContextCompat.getColor(context, R.color.white))
+                setTextColor(ContextCompat.getColor(context, R.color.black))
                 typeface = resources.getFont(R.font.bold)
             }
         }

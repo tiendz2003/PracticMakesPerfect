@@ -2,4 +2,31 @@
 <resources>
     <dimen name="button_stroke_width">6dp</dimen>
     <dimen name="button_padding">16dp</dimen>
+    <dimen name="dp_125">125dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_66">66dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_130">130dp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="dp_42">42dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_124">124dp</dimen>
+    <dimen name="dp_654">654dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
 </resources>
