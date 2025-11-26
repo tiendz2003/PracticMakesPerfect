@@ -47,24 +47,19 @@ class MoviesFragment : Fragment() {
 
     private fun setupRecyclerView() {
         homeAdapter = HomeChannelAdapter { channel ->
-            // Handle item click
             navigateToDetail(channel)
         }
 
         binding.recyclerHome.apply {
             adapter = homeAdapter
             layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(false)
+            itemAnimator = null
 
-            // Performance optimizations
-            setHasFixedSize(false) // Because items have different heights
-            itemAnimator = null // Disable animations for better scrolling
-
-            // Prefetch for smoother scrolling
             (layoutManager as? LinearLayoutManager)?.apply {
                 initialPrefetchItemCount = 4
             }
 
-            // Add spacing between groups
             addItemDecoration(object : RecyclerView.ItemDecoration() {
                 override fun getItemOffsets(
                     outRect: Rect,

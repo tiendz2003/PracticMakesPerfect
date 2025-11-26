@@ -1,9 +1,12 @@
 package com.manutd.ronaldo.practicemakesperfect.presentation
 
 import android.R.attr.visibility
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -33,11 +36,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         onTransformationStartContainer()
         setContentView(binding.root)
-        setupBottomBar()
-        observeViewModel()
+        binding.btnEnableKeyboard.setOnClickListener {
+            // Open input method settings
+            startActivity(Intent(Settings.ACTION_INPUT_METHOD_SETTINGS))
+        }
+
+        binding.btnSelectKeyboard.setOnClickListener {
+            // Open input method picker
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showInputMethodPicker()
+        }
     }
 
-    private fun observeViewModel() {
+   /* private fun observeViewModel() {
         lifecycleScope.launch {
             viewModels.uiState.flowWithLifecycle(
                 lifecycle,
@@ -51,9 +62,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 
-    fun setupBottomBar() {
+   /* fun setupBottomBar() {
         val topLevelDestinations = setOf(
             R.id.homeFragment,
             R.id.accountFragment,
@@ -75,5 +86,5 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
-    }
+    }*/
 }

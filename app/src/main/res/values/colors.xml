@@ -20,4 +20,21 @@
     <color name="colorRippleLight">#0fffffff</color>
     <!-- Video Badge Background -->
     <color name="badge_background">#E0000000</color>
+    <color name="keyboard_background">#FF1B1B1F</color>
+
+    <!-- Key colors -->
+    <color name="key_background_normal">#FF2D2D33</color>
+    <color name="key_background_function">#FF3D3D45</color>
+    <color name="key_background_enter">#FF4A6EE0</color>
+    <color name="key_background_space">#FF3D3D45</color>
+    <color name="key_background_pressed">#FF4A4A55</color>
+    <color name="key_background_shift_on">#FF5A5A65</color>
+    <color name="key_background_caps_lock">#FF4A6EE0</color>
+
+    <!-- Key text colors -->
+    <color name="key_text_normal">#FFFFFFFF</color>
+    <color name="key_text_enter">#FFFFFFFF</color>
+
+    <!-- Ripple -->
+    <color name="key_ripple_color">#40FFFFFF</color>
 </resources>

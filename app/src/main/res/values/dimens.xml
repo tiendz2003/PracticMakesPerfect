@@ -29,4 +29,27 @@
     <dimen name="dp_654">654dp</dimen>
     <dimen name="dp_10">10dp</dimen>
     <dimen name="dp_2">2dp</dimen>
+
+    <!-- Keyboard -->
+    <dimen name="keyboard_padding_horizontal">3dp</dimen>
+    <dimen name="keyboard_padding_vertical">4dp</dimen>
+
+    <!-- Key -->
+    <dimen name="key_height">52dp</dimen>
+    <dimen name="key_padding">2dp</dimen>
+    <dimen name="key_corner_radius">6dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="key_text_size_letter">22sp</dimen>
+    <dimen name="key_text_size_number">18sp</dimen>
+    <dimen name="key_text_size_symbol">16sp</dimen>
+    <dimen name="key_text_size_space">12sp</dimen>
+
+    <!-- Suggestion bar -->
+    <dimen name="suggestion_bar_height">44dp</dimen>
+
+    <!-- Emoji picker -->
+    <dimen name="emoji_picker_height">280dp</dimen>
+    <dimen name="emoji_item_size">36dp</dimen>
+
 </resources>

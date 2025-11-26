@@ -576,4 +576,5 @@ Mở “Cài đặt > Cập nhật” hoặc truy cập rophim.com để xem chi
     <string name="week_ago">%d tuần trước</string>
     <string name="yesterday">Hôm qua</string>
     <string name="app_name">PracticeMakesPerfect</string>
+    <string name="subtype_en_us">English (US)</string>
 </resources>

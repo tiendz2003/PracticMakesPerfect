@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <style name="Theme.PracticeMakesPerfect" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <style name="Theme.PracticeMakesPerfect" parent="Theme.Material3.Light.NoActionBar" >
             <item name="colorPrimary">@color/primaryColor</item>
             <item name="colorPrimaryVariant">@color/primaryColor</item>
             <item name="colorControlHighlight">@color/primaryColor</item>

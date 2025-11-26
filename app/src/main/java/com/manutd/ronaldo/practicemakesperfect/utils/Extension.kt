@@ -10,6 +10,7 @@ import android.net.Uri
 import android.util.Log
 import android.util.TypedValue
 import androidx.camera.core.ImageProxy
+import androidx.compose.ui.unit.Dp
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.FileProvider
 import java.io.File
